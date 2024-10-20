@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'nokogiri'
 require "httparty"
 
 class ErrorResponse::UnsupportedHost
