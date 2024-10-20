@@ -1,24 +1,36 @@
-# README
+# Web scraper
+> Extract product data from Zara and Hering.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Why?
+I made this project to practice ruby and scraping techniques.
 
-Things you may want to cover:
+## Dependencies
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Bundler](https://bundler.io/) 
 
-* Ruby version
+## Install
+After cloning this repository, navigate to project folder and run:
+```bash
+bundle install
+```
+then spin up the web server
+```bash
+rails s
+```
+Default port for this project is `3002`. You can change at `config/puma.rb`
 
-* System dependencies
+## Usage
+```
+POST /scrape
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+BODY
+{
+    "id": "",
+    "url": "",
+    "webhook": ""
+}
+```
+Body parameters:
+- **id**: the id of your external resource (Like `@task.id`, or `@product.id`).
+- **url**: URL to be scrapped
+- **webhook**: URL to notify when scrape finishes
