@@ -30,7 +30,6 @@ gem "bootsnap", require: false
 gem "rack-cors"
 
 gem 'nokogiri'
-gem 'watir'
 gem 'httparty'
 
 group :development, :test do
